@@ -1,0 +1,327 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f5f2;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(62, 39, 35, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    size: 30px;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 30px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("Images/Cafe_filtre_preparation.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: orange;
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: 900;
+}
+
+.title{
+    text-align: center;
+    background-color: #fff;
+}
+
+.btn:hover {
+    background: #ff9800;
+    transform: scale(1.05);
+}
+
+/* SECTION */
+section {
+    padding: 80px 60px;
+}
+
+/* CARDS (menu) */
+.menu {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu div {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.menu div:hover {
+    transform: translateY(-10px);
+}
+
+.menu h2 {
+    margin-bottom: 20px;
+    color: #3e2723;
+}
+
+.menu li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* IMAGE SECTION */
+.image-section {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.image-section img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.image-section div {
+    width: 50%;
+}
+
+/* ABOUT */
+
+.about{
+    background-color: #fff;
+}
+.about h1 {
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+.contact form {
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+input, textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #3e2723;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5d4037;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3e2723;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 40px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .image-section {
+        flex-direction: column;
+    }
+
+    .image-section img,
+    .image-section div {
+        width: 100%;
+    }
+}
+
+
+/* HERO CONTACT */
+.contact-hero {
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("Images/photo-1517248135467-4c7edcad34c4.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.contact-container {
+    display: flex;
+    gap: 50px;
+    padding: 60px;
+}
+
+/* INFOS */
+.contact-info {
+    flex: 1;
+    background: #f8f5f2;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3e2723;
+    font-weight: bold;
+}
+
+/* FORM */
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+}
+
+.contact-form button {
+    background: orange;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ff9800;
+    transform: scale(1.03);
+}
+
+/* MAP */
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
